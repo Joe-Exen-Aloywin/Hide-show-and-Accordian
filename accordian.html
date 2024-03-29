@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Accordian.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document </title>
+</head>
+
+<body>
+<!-- The below Example is to showbox and boxhide -->
+<div id="box">
+    <p class="fs-3 fw-bold text-black text-center">box</p>
+  </div>
+  <p class="fw-bold text-gray text-center">If you click the button "click me" the box will hide</p>
+  <button class=" btn btn bg-warning btn-outline-primary text-black " onclick="mainfunction()">Click me</button>
+  <script>
+    function mainfunction() {
+      var a = document.getElementById("box");
+      if (a.style.display === "none") {
+        a.style.display = "block";
+
+      }
+      else {
+        a.style.display = "none";
+      }
+    }
+  </script>
+<!-- Accordian is to display the content when we click over it  -->
+<div class="Accordian mt-5 text-center">
+<h2>Click the below button to see the content</h2>
+<button class="accordian">HTML</button>
+<div class="panel">
+    <p>All HTML elements can have attributes</p>
+    <p>Attributes provide additional information about elements</p>
+    <p>Attributes are always specified in the start tag</p>
+    <p>Attributes usually come in name/value pairs like: name="value"</p>
+</div>
+<button class="accordian">CSS</button>
+<div class="panel">
+<P>CSS is the language we use to style an HTML document.</P>
+<p>CSS describes how HTML elements should be displayed.</p>
+<p>This tutorial will teach you CSS from basic to advanced.</P>
+</div>
+<script>
+ var a=document.getElementsByClassName("accordian");
+ var i;
+ for(i=0;i<a.length;i++){
+    a[i].addEventListener("click",function(){
+        var panel = this.nextElementSibling;
+        if(panel.style.display === "block"){
+            panel.style.display ="none";
+        }
+        else{
+            panel.style.display="block";
+        }
+    });
+ }
+</script>
+</div>
+</body>
+</html>
+ 

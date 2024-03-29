@@ -1,0 +1,15 @@
+body{
+    background: rgb(251,145,63);
+background: radial-gradient(circle, rgba(251,145,63,1) 0%, rgba(236,252,70,1) 100%);
+}
+.active,.accordian:hover{
+    background-color: aqua;
+}
+.panel{
+    display: none;
+    /* background-color: pink; */
+}
+.btn{
+    margin-left: 630px;
+    
+}
